@@ -1,13 +1,39 @@
+@font-face {
+    font-family: 'Akira';
+    src:url('./fonts/akira_expanded_demo-webfont.woff2') format('woff2'),
+        url('./fonts/akira_expanded_demo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'thinkbold';
+    src: url('./fonts/think-bold-webfont.woff2') format('woff2'),
+         url('./fonts/think-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+::selection {
+    background: #404ca6;
+}
+
 h1 {
         font-size: 4rem;
+        font-family: 'Akira';
       }
       p {
         font-size: 1.5rem;
+        color: wheat;
+      }
+      h2 {
+        color: wheat;
+        font-family: 'Akira';
       }
       body {
         margin: 0;
         padding: 0;
-        font-family: 'Prompt', sans-serif;
+        font-family: 'Poppins', sans-serif;
         color: white;
         background: #202731;
         overflow-x: hidden;
@@ -21,7 +47,7 @@ h1 {
     nav {
       opacity: 0;
       transform: translateY(-20px);
-      animation: nav-anim 0.5s ease-out .5s forwards;
+      animation: nav-anim 1s ease-out .5s forwards;
     }
 
     @keyframes nav-anim {
@@ -35,7 +61,7 @@ h1 {
         display: flex;
         width: 100%;
         align-items: center;
-        justify-content: space-around;
+        justify-content: center;
         height: 80px;
         line-height: 80px;
         padding-top: 80px;
@@ -43,25 +69,16 @@ h1 {
 
       .navItems{
         display: flex;
+        align-items: center;
         }     
 
         .navItems li{
             list-style: none;
-            margin: 0 15px;
-        }
-        .navItems li a{
-            font-size: 25px;
-            color: white;
-            letter-spacing: 3px;
-            text-decoration: none;
-            text-transform: capitalize;   
+            margin: 0 35px;
+            font-size: 30px;
         }
 
-    .links a{
-        font-size: 30px;
-        margin: 25px 10px;
-        color: white;
-    }
+
     .links-bottom a{
      
       font-size: 50px;
@@ -108,7 +125,8 @@ h1 {
         line-height: 1;
         text-decoration: none;
         transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-        position: relative;  
+        position: relative; 
+        font-family: 'thinkbold'; 
     }
     .coolbutton:hover {  
         outline: none;
@@ -139,6 +157,9 @@ h1 {
       width: 60px;
     }
 
+    .mail {
+      font-family: 'Akira';
+    }
 
       .blue {
         background: #3c31dd;
@@ -279,8 +300,9 @@ h1 {
    .navbar {
       display: flex;
       text-align: center;
-      align-items: center;
+      justify-content: end;
       padding-top: 30px;
+      
    }
    .burger {
    width: 42px;
@@ -288,6 +310,7 @@ h1 {
    cursor: pointer;
    position: relative;
    display: none;
+   margin-right: 30px;
    }
    .burger span {
    width: 100%;
@@ -361,6 +384,10 @@ h1 {
    display: none;
    }
 
+   h1 {
+    font-size: 2.5rem;
+   }
+
     .projets ul iframe {
       width: 100%;
     }
@@ -368,7 +395,7 @@ h1 {
 
   @media screen and (min-width: 446px) and (max-width: 614px) {
     .section2 h1 {
-      font-size: 3rem;
+      font-size: 1.8rem;
     }
     .section2 .coolbutton {
       font-size: 18px;
@@ -406,8 +433,12 @@ h1 {
       width: 90%;
    }
 
+   .section2 {
+      min-height: 250px;
+    }
+
     .section2 h1 {
-      font-size: 2.2rem;
+      font-size: 1.4rem;
     }
     .section2 .coolbutton {
       font-size: 13px;
