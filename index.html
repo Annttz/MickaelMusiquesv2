@@ -28,7 +28,6 @@
          <ul class="navItems">
             <li><a href="index.html#a-propos" class="navlinks">À propos</a></li>
             <li><a href="index.html#projets" class="navlinks">Projets</a></li>
-            <li><a href="contact.html"class="navlinks">Contact</a></li>
          </ul>
       </div>
       <div class="burger">
@@ -119,7 +118,11 @@
           <a href="https://www.facebook.com/MickaelMusiques"><i class="fab fa-facebook"></i></a>
           <a href="#"><i class="fab fa-spotify"></i></a>
           <a href="https://twitter.com/MickaelMusiques?t=QP4y6YdcNVPh1DSuACkqnw&s=09"><i class="fab fa-twitter"></i></a>
-        </div>     
+        </div>
+        <br>
+        <br>
+        <a href="mailto:Mickaelmusiques@gmail.com" data-aos="zoom-in-down"
+     data-aos-duration="800"><i class="fa-solid fa-arrow-right"></i> Mickaelmusiques@gmail.com</a>     
     </section>
     <div class="spacer layer2 flip section6"></div>
 
@@ -135,7 +138,7 @@
       const body4 = document.querySelector(".section4")
       const body5 = document.querySelector(".section5")
       const body6 = document.querySelector(".section6")
-      const body7 = document.querySelector(".links")    
+         
 
       menuHamburger.addEventListener('click',()=>{
       navLinks.classList.toggle('mobile-menu')
@@ -145,15 +148,7 @@
          burger.addEventListener('click', () => {
          burger.classList.toggle('active');
       });
-//       var monElement = document.querySelectorAll(".navlinks");
-// monElement.addEventListener("click", function(event) {
-// 			event.target.classList.remove("active");
-// 		});
 
-// 		monElement.addEventListener("click", function(event) {
-// 			event.target.classList.add("active");
-// 		});
-		
       
       function toggleDisplay() {
          if (body.style.display === "none") {
@@ -163,7 +158,6 @@
               body4.style.display = "flex";
               body5.style.display = "flex";
               body6.style.display = "flex";
-              body7.style.display = "flex"; // ou "inline", "flex", etc. selon le type d'élément
          } else {
             body.style.display = "none";
              body2.style.display = "none";
@@ -171,7 +165,6 @@
               body4.style.display = "none";
               body5.style.display = "none";
               body6.style.display = "none";
-              body7.style.display = "none";
          }
       }
 
@@ -184,7 +177,6 @@
               body4.style.display = "flex";
               body5.style.display = "flex";
               body6.style.display = "flex";
-              body7.style.display = "flex";
               burger.classList.remove('active');
               navLinks.classList.remove('mobile-menu');
   });
