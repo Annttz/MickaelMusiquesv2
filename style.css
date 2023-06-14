@@ -28,7 +28,7 @@ h1 {
       }
       h2 {
         color: wheat;
-        font-family: 'Akira';
+        font-weight: bold;
       }
       body {
         margin: 0;
@@ -47,7 +47,7 @@ h1 {
     nav {
       opacity: 0;
       transform: translateY(-20px);
-      animation: nav-anim 1s ease-out .5s forwards;
+      animation: nav-anim 1.2s ease-out 1s forwards;
     }
 
     @keyframes nav-anim {
@@ -62,20 +62,23 @@ h1 {
         width: 100%;
         align-items: center;
         justify-content: center;
+        text-align: center;
         height: 80px;
         line-height: 80px;
-        padding-top: 80px;
+        padding-top: 40px;
+        
       }
 
       .navItems{
         display: flex;
         align-items: center;
+        padding-left: 20px;
         }     
 
         .navItems li{
             list-style: none;
-            margin: 0 35px;
-            font-size: 30px;
+            font-size: 35px;
+            margin: 0 30px
         }
 
 
@@ -94,18 +97,11 @@ h1 {
       font-size: 20px;
     }
 
-      .burger {
-        width: 42px;
-        height: 24px;
-        cursor: pointer;
-        position: relative;
-        display: none;
-      }
-
       section {
         position: relative;
         display: flex;
         flex-direction: column;
+        text-align: center;
         align-items: center;
         min-height: 400px;
         padding-top: 100px;
@@ -297,92 +293,15 @@ h1 {
    body {
       overflow: hidden auto;
    }
-   .navbar {
-      display: flex;
-      text-align: center;
-      justify-content: end;
-      padding-top: 30px;
-      
-   }
-   .burger {
-   width: 42px;
-   height: 24px;
-   cursor: pointer;
-   position: relative;
-   display: none;
-   margin-right: 30px;
-   }
-   .burger span {
-   width: 100%;
-   height: 4px;
-   background-color: white;
-   display: block;
-   position: absolute;
-   top: 50%;
-   transform: translateY(-50%);
-   transition: background-color 0.5s ease-in-out;
-   }
-   .burger span::before, .burger span::after{
-   content: '';
-   position: absolute;
-   width: 100%;
-   height: 4px;
-   background-color: white;
-   transition: transform 0.5s ease-in-out;
-   }
-   .burger span::before{
-   transform: translateY(-10px);
-   right: 20%;
-   }
-   .burger span::after{
-   transform: translateY(10px);
-   right: 15%;
-   }
-   .burger.active span{
-   background-color: transparent;
-   }
-   .burger.active span::before{
-   transform: translateY(0px) rotateZ(45deg);
-   }
-   .burger.active span::after{
-   transform: translateY(0px) rotateZ(-45deg);
-   }
-   .burger {
-      display: block;
-   }
-   nav {
-      display: flex;
-      z-index: 5;
-   }
+
    .navItems {
-      top: 0;
-      left: 0;
-      position: absolute;
-      width: 100%;
-      height: 100vh;
-      background-color: #2a313a94;
-      -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: blur(10px);
-      margin-left: -120%;
-      transition: all 0.5s ease;
+    padding-left: 0;
    }
-   .mobile-menu {
-      margin-left: 0;
-      
-   } 
-   .navResponsive ul {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-top: 200px;
-   }
-   .navItems ul li {
-      margin : 25px 0;
-      font-size: 1.5em;
-   }
-   .navItems::before{
-   display: none;
-   }
+
+   .navItems li {
+        font-size: 25px;
+  }  
+
 
    h1 {
     font-size: 2.5rem;
@@ -394,6 +313,12 @@ h1 {
   }
 
   @media screen and (min-width: 446px) and (max-width: 614px) {
+    .navItems {
+    padding-left: 0;
+   }
+   .navItems li {
+        font-size: 18px;
+  }
     .section2 h1 {
       font-size: 1.8rem;
     }
@@ -425,16 +350,17 @@ h1 {
   }
 
   @media screen and  (max-width: 445px) {
-    .links a{
-        font-size: 20px;
-    }
-
+ 
     .navItems {
-      width: 90%;
+    padding-left: 0;
    }
 
+   .navItems li {
+        font-size: 13px;
+  }
+
    .section2 {
-      min-height: 250px;
+     padding-top: 40px;
     }
 
     .section2 h1 {
@@ -473,5 +399,8 @@ h1 {
       padding-top: 20px;
       font-size: 20px;
       font-weight: bold;
+    }
+    .mail {
+      font-size: 14px;
     }
   }
